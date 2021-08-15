@@ -1,0 +1,55 @@
+/*----RESETEO*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER--------*/
+.header{
+    font-size: 3em;
+    text-align: center;
+    background-color: rgb(219, 21, 209);
+    padding: 2%;
+}
+
+/*MAIN------*/
+.eslogan{
+    font-size: 2em;
+    background-color: black;
+    padding: 5%;
+    color: white;
+    text-align: center
+}
+
+/*----SECCION DIRECCION*/
+.divDireccion{
+    display: flex;
+    padding: 1%;
+    justify-content: space-evenly;
+}
+
+
+/*---SECCION BEBIDAS*/
+.tituloBebidas{
+    text-align: center;
+    font-size: 3em;
+}
+.bebidas{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedorBebidas{
+    height: 200px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/*FOOTER----------*/
+.footer{
+    margin-top: 1%;
+    height: 80px;
+    background-color: gray;
+    border-top: 1px solid black;
+    text-align: center;
+}
