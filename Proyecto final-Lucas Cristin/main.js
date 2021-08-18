@@ -13,13 +13,40 @@ const listaDeBebidas = []
 const fernet = new bebidas (`Fernet`, 500 , 20, true)
 const gancia = new bebidas (`Gancia`, 300, 30, true)
 const vodka = new bebidas (`Vodka`, 700, 15, true)
-listaDeBebidas.push(fernet, gancia, vodka)
+const vinoTermidor = new bebidas (`Vino-Termidor`,150, 0, false)
+const VinoDada = new bebidas (`Vino-Dada`, 400, 0, false)
+listaDeBebidas.push(fernet, gancia, vodka, vinoTermidor, VinoDada)
 
 //---Variables, constantes y selectores
 const nombre = prompt("Ingrese su Nombre")
 alert(`Hola ${nombre}`)
 let totalCompra = 0
 let seguirComprando = true
+
+//---------Storage
+const listaDeBebidasJSON = JSON.stringify(listaDeBebidas)
+localStorage.setItem("listaDeBebidas", listaDeBebidasJSON)
+
+//---------Dom
+let seccionProximamente = document.querySelector("#seccionProximamente")
+let divProximamente = document.createElement("div")
+let pProximamente = document.createElement("p")
+pProximamente.textContent = `Proximamente nuevas bebidas`
+
+let pProximamenteBebidas = document.createElement("p")
+pProximamenteBebidas.textContent = `Como ${vinoTermidor.nombreBebida} $${vinoTermidor.precio} ${VinoDada.nombreBebida} $${VinoDada.precio}`
+divProximamente.appendChild(pProximamente)
+divProximamente.appendChild(pProximamenteBebidas)
+seccionProximamente.appendChild(divProximamente)
+divProximamente.setAttribute("class","divJS")
+
+
+console.log(document.body.innerHTML);
+
+/*<div>
+    <p>Proximamente, nuevas bebidas</p>
+  </div>
+            */
 
 //---Funciones
 const algoritmo = (edad) => {

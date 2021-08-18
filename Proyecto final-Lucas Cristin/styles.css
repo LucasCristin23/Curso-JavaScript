@@ -45,6 +45,14 @@
     border: 1px solid black;
 }
 
+/*----SECCION PROXIMAMENTE BS*/
+.divJS{
+    text-align: center;
+    font-size: 2em;
+    padding: 2%;
+    background-color: aquamarine;
+}
+
 /*FOOTER----------*/
 .footer{
     margin-top: 1%;
