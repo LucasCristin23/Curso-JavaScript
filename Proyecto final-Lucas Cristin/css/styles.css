@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.pModeracion {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: black;
+  color: white;
+  padding: 0.5%; }
+
+.header {
+  font-size: 3em;
+  text-align: center;
+  background-color: #db15d1;
+  padding: 2%; }
+
+.footer {
+  margin-top: 1%;
+  height: 80px;
+  background-color: gray;
+  border-top: 1px solid black;
+  text-align: center; }
+
+/*MAIN------*/
+.eslogan {
+  font-size: 2em;
+  background-color: black;
+  padding: 5%;
+  color: white;
+  text-align: center; }
+
+/*----SECCION DIRECCION*/
+.divDireccion {
+  display: flex;
+  padding: 1%;
+  justify-content: space-evenly; }
+
+/*---SECCION BEBIDAS*/
+.tituloBebidas {
+  text-align: center;
+  font-size: 3em; }
+
+.bebidas {
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-evenly; }
+
+.contenedorBebidas {
+  height: 200px;
+  width: 100px;
+  border: 1px solid black; }
+
+/*----SECCION PROXIMAMENTE BS*/
+.divJS {
+  text-align: center;
+  font-size: 2em;
+  padding: 2%;
+  background-color: aquamarine; }

@@ -102,3 +102,5 @@ for (const bebidas of listaDeBebidas){
     console.log(bebidas.precio);
     console.log(bebidas.nombreBebida);
 }
+
+
