@@ -1,19 +1,37 @@
 * {
   margin: 0;
   padding: 0; }
+  * img {
+    max-width: 100%;
+    max-height: 100%; }
+
+.navDeBs {
+  position: sticky;
+  top: 0;
+  background-color: #db15d1;
+  font-family: "Rampart One", cursive; }
+  .navDeBs div .bebidasComboLoco {
+    font-size: 2.3em; }
+  .navDeBs .navBS {
+    justify-content: flex-end; }
+    .navDeBs .navBS div .estructuraCarrito {
+      display: flex; }
 
 .pModeracion {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background-color: black;
   color: white;
-  padding: 0.5%; }
+  padding: 0.3%;
+  font-family: "Crimson Text", serif;
+  margin: 0; }
 
-.header {
+.headerName {
   font-size: 3em;
   text-align: center;
   background-color: #db15d1;
-  padding: 2%; }
+  padding: 2%;
+  margin: 0; }
 
 .footer {
   margin-top: 1%;
@@ -23,33 +41,61 @@
   text-align: center; }
 
 /*MAIN------*/
+body {
+  background-color: #e0e0e0; }
+
 .eslogan {
   font-size: 2em;
   background-color: black;
   padding: 5%;
   color: white;
-  text-align: center; }
+  text-align: center;
+  font-family: "Calligraffitti", cursive; }
 
 /*----SECCION DIRECCION*/
 .divDireccion {
   display: flex;
   padding: 1%;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  border-bottom: 1px solid black; }
+  .divDireccion div {
+    text-align: center;
+    font-family: "Crimson Text", serif; }
+    .divDireccion div h2 {
+      font-size: 2.5em; }
+    .divDireccion div p {
+      font-size: 1.5em; }
+  .divDireccion iframe {
+    border-radius: 2%; }
 
 /*---SECCION BEBIDAS*/
-.tituloBebidas {
-  text-align: center;
-  font-size: 3em; }
-
-.bebidas {
-  padding-top: 2%;
-  display: flex;
-  justify-content: space-evenly; }
-
-.contenedorBebidas {
-  height: 200px;
-  width: 100px;
-  border: 1px solid black; }
+.seccionBebidas {
+  border-bottom: 1px solid black;
+  padding-bottom: 1%; }
+  .seccionBebidas .tituloBebidas {
+    text-align: center;
+    font-size: 3em;
+    font-family: "Crimson Text", serif; }
+  .seccionBebidas hr {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .seccionBebidas .bebidas {
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly; }
+    .seccionBebidas .bebidas .contenedorBebidas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+      width: 100px;
+      border: 1px solid black; }
+      .seccionBebidas .bebidas .contenedorBebidas .tituloBebidasContenedor {
+        font-size: 2em; }
+      .seccionBebidas .bebidas .contenedorBebidas .imagenesBebidas {
+        width: 50px;
+        height: 80px; }
 
 /*----SECCION PROXIMAMENTE BS*/
 .divJS {
@@ -57,3 +103,9 @@
   font-size: 2em;
   padding: 2%;
   background-color: aquamarine; }
+
+.seccionTituloCarrito {
+  text-align: center;
+  font-family: "Crimson Text", serif; }
+  .seccionTituloCarrito hr {
+    margin: 0 5% 0% 5%; }

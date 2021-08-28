@@ -1,10 +1,18 @@
+//--IMPORTS
+@import 'utilities/_variables.scss';
+
 /*MAIN------*/
+body{
+    background-color: rgb(224, 224, 224);
+}
+
 .eslogan{
     font-size: 2em;
     background-color: black;
     padding: 5%;
     color: white;
-    text-align: center
+    text-align: center;
+    font-family: $fonts-slogan;
 }
 
 /*----SECCION DIRECCION*/
@@ -12,24 +20,60 @@
     display: flex;
     padding: 1%;
     justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    div{
+        text-align: center;
+        font-family: $fonts-beber;
+            h2{
+                font-size: 2.5em;
+            }
+            p{
+                font-size: 1.5em;
+            }
+    }
+    iframe{
+        border-radius: 2%;
+    }
 }
 
 
 /*---SECCION BEBIDAS*/
-.tituloBebidas{
-    text-align: center;
-    font-size: 3em;
+.seccionBebidas{
+    border-bottom: 1px solid black;
+    padding-bottom: 1%;
+    .tituloBebidas{
+        text-align: center;
+        font-size: 3em;
+        font-family: $fonts-beber;
+    }
+    hr{
+        margin-top: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .bebidas{
+        padding-top: 2%;
+        display: flex;
+        justify-content: space-evenly;
+        .contenedorBebidas{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            width: 100px;
+            border: 1px solid black;
+            .tituloBebidasContenedor{
+                font-size: 2em;
+            }
+            .imagenesBebidas{
+                width: 50px;
+                height: 80px;
+            }
+        } 
+    }
+       
 }
-.bebidas{
-    padding-top: 2%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.contenedorBebidas{
-    height: 200px;
-    width: 100px;
-    border: 1px solid black;
-}
+
 
 /*----SECCION PROXIMAMENTE BS*/
 .divJS{

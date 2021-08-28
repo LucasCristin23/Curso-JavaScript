@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebidas Combo Loco</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
@@ -22,10 +22,10 @@
     <header>
         <p class="pModeracion">Beber con moderación - Prohibida su venta a menores de 18 años </p>
     </header>
-   
+
+
     <!--MAIN-->
     <main>
-        <!--Inicio del nav de BS-->
         <nav class="navbar navbar-expand-lg navbar-light navDeBs">
             <div class="container-fluid">
                 <a class="navbar-brand bebidasComboLoco">Bebidas Combo loco</a>
@@ -34,7 +34,7 @@
             </button>
         <div class="collapse navbar-collapse navBS" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 <a class="nav-link" href="#">Features</a>
                 <a class="nav-link" href="#">Pricing</a>
                 <a class="nav-link disabled" href="#" tabindex="-1">Disabled</a>
@@ -51,62 +51,31 @@
         </div>
     </div>
         </nav>  
-        <!--FIN DEL NAV DE BS-->
-        <section>
-            <p class="eslogan">"La mejor bebida al mejor precio"</p>
-        </section>
-
-        <!--Seccion Ubicacion-->
-        <section>
-            <div class="divDireccion">
-                <div>
-                    <h2>Ubicacion</h2>
-                    <hr>
-                    <p>Calle falsa 123</p>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.04922376962!2d-58.3192513570252!3d-34.70393837771164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33265d264d717%3A0x1ead5ade4e098764!2sAvenida%20Bartolom%C3%A9%20Mitre%20%26%20Las%20Flores%2C%20Wilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1628718790368!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-
-        <!--Seccion bebidas-->
-        <section class="seccionBebidas">
-            <h2 class="tituloBebidas">Bebidas</h2>
+        <section class="seccionTituloCarrito">
+            <h1>Carrito de Compras</h1>
             <hr>
-            <div class="bebidas">
-                <div class="contenedorBebidas">
-                    <p class="tituloBebidasContenedor" id="fernet">Fernet</p>
-                    <div class="imagenesBebidas">
-                        <img src="imagenes/fernetBranca.jpg" alt="Fernet Branca">
-                    </div>
-                </div>
-                <div class="contenedorBebidas">
-                    <p class="tituloBebidasContenedor">Gancia</p>
-                    <div class="imagenesBebidas">
-                        <img src="imagenes/gancia.jpg" alt="Gancia">
-                    </div>
-                </div>
-                <div class="contenedorBebidas">
-                    <p class="tituloBebidasContenedor">Vodka</p>
-                    <div class="imagenesBebidas">
-                        <img src="imagenes/vodkaSkyyCoco.jpg" alt="Vodka skyy de sabor coco">
-                    </div>
-                </div>
-            </div>
         </section>
-        <section id="seccionProximamente">
+        <section id="productos">    
+            <!--TABLA DE BS-->
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="tbCarrito">
+
+                </tbody>
+              </table>
         </section>
     </main>
-
-    <!--FOOTER-->
-    <footer>
-        <div class="footer">
-            <p>Todos los derechos reservados bla bla bla</p>
-        </div>
-    </footer>
     
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>

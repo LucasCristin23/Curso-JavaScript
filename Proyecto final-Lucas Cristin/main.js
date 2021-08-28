@@ -8,6 +8,7 @@ class bebidas{
     }
 }
 
+//---Variables, constantes y selectores
 const listaDeBebidas = []
 
 const fernet = new bebidas (`Fernet`, 500 , 20, true)
@@ -17,11 +18,14 @@ const vinoTermidor = new bebidas (`Vino-Termidor`,150, 0, false)
 const VinoDada = new bebidas (`Vino-Dada`, 400, 0, false)
 listaDeBebidas.push(fernet, gancia, vodka, vinoTermidor, VinoDada)
 
-//---Variables, constantes y selectores
+//---Saludo y vericidad de edad
+/*
 const nombre = prompt("Ingrese su Nombre")
 alert(`Hola ${nombre}`)
 let totalCompra = 0
 let seguirComprando = true
+const verificarEdad = Number(prompt(`Ingrese su edad`))
+*/
 
 //---------Storage
 const listaDeBebidasJSON = JSON.stringify(listaDeBebidas)
@@ -40,15 +44,65 @@ divProximamente.appendChild(pProximamenteBebidas)
 seccionProximamente.appendChild(divProximamente)
 divProximamente.setAttribute("class","divJS")
 
+//----AGREGAR BOTON A LAS BEBIDAS
+let divContenedordeBebidas = document.querySelectorAll(".contenedorBebidas")
 
-console.log(document.body.innerHTML);
+const botonCarrito = () =>{
+    for (let i = 0; i < divContenedordeBebidas.length; i++){
+    let botonAgragarCarrito = document.createElement("button")
+    botonAgragarCarrito.textContent = `Agregar al carrito`
+    botonAgragarCarrito.setAttribute(`class`,`btn btn-dark`)
+    botonAgragarCarrito.setAttribute(`id`,`botonCarrito${i}`)     
 
-/*<div>
-    <p>Proximamente, nuevas bebidas</p>
-  </div>
-            */
+    divContenedordeBebidas[i].appendChild(botonAgragarCarrito)
+    }
+}
 
+botonCarrito()
+
+//---Secuencia de comprar
+//---Llamo a los tres botones 
+let botonCarritoFernet = document.querySelector(`#botonCarrito0`)
+let botonCarritoGancia = document.querySelector(`#botonCarrito1`)
+let botonCarritoVodka = document.querySelector(`#botonCarrito2`)
+
+
+
+botonCarritoFernet.addEventListener(`click`,() =>{
+    listaCarrito.push(fernet)
+    let listaCarritoJSON = JSON.stringify(listaCarrito)
+    localStorage.setItem("listaCarrito", listaCarritoJSON)
+})
+botonCarritoGancia.addEventListener(`click`,() =>{
+    listaCarrito.push(gancia)
+    let listaCarritoJSON = JSON.stringify(listaCarrito)
+    localStorage.setItem("listaCarrito", listaCarritoJSON)
+})
+botonCarritoVodka.addEventListener(`click`,() =>{
+    listaCarrito.push(vodka)
+    let listaCarritoJSON = JSON.stringify(listaCarrito)
+    localStorage.setItem("listaCarrito", listaCarritoJSON)
+})
+const listaCarrito = []
+//----Mostrar cuantos productos lleva
+if(listaCarrito.length != 0){
+    let divContadorDeCarrito = document.querySelector(`#contadorDeCarrito`)
+    let contadorDeCarrito = document.createElement("p")
+    contadorDeCarrito.textContent = listaCarrito.length + 1
+    divContadorDeCarrito.appendChild(contadorDeCarrito);
+}
+
+
+
+
+console.log(listaCarrito);
 //---Funciones
+
+
+
+
+//------------------------------------LOGICA ANTERIOR QUE SEGUIRE USANDO COMO GUIA--------------------------
+/*
 const algoritmo = (edad) => {
     if(edad >=18){
         while(seguirComprando){
@@ -102,5 +156,11 @@ for (const bebidas of listaDeBebidas){
     console.log(bebidas.precio);
     console.log(bebidas.nombreBebida);
 }
-
-
+*/
+/*
+if(verificarEdad >=18){
+    alert(`Puede comprar`)
+}else{
+    alert(`Usted es menor, no puede comprar`)
+}
+*/
