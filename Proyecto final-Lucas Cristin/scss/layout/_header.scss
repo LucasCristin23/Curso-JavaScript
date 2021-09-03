@@ -1,6 +1,11 @@
 @import 'utilities/_variables.scss';
 
-//-------------HEADER
+
+//-----clase JS 
+.closeButtom{
+    padding: .50em .50em;
+    line-height: initial;
+}
 
 
 //---NAV DE BS
@@ -9,6 +14,8 @@
     top: 0;
     background-color: rgb(219, 21, 209);;
     font-family: $fonts-bebidasLocas;
+    box-shadow: 0 10px 25px rgb(219, 21, 209);
+    z-index: 2;
     div{
         .bebidasComboLoco{
             font-size: 2.3em;

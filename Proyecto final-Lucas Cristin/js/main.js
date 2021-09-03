@@ -66,8 +66,6 @@ let botonCarritoFernet = document.querySelector(`#botonCarrito0`)
 let botonCarritoGancia = document.querySelector(`#botonCarrito1`)
 let botonCarritoVodka = document.querySelector(`#botonCarrito2`)
 
-
-
 botonCarritoFernet.addEventListener(`click`,() =>{
     listaCarrito.push(fernet)
     let listaCarritoJSON = JSON.stringify(listaCarrito)
