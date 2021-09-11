@@ -40,11 +40,20 @@
   margin: 0; }
 
 .footer {
+  color: #e0dede;
+  font-family: "Crimson Text", serif;
   margin-top: 1%;
-  height: 80px;
-  background-color: gray;
-  border-top: 1px solid black;
-  text-align: center; }
+  background-color: #3b3b3b;
+  border-top: 1px solid black; }
+  .footer .divPadreFooter {
+    display: flex;
+    justify-content: space-evenly; }
+  .footer .derechosReservados {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 0; }
+    .footer .derechosReservados p {
+      margin-bottom: 0; }
 
 /*MAIN------*/
 body {
@@ -62,8 +71,7 @@ body {
 .divDireccion {
   display: flex;
   padding: 1%;
-  justify-content: space-evenly;
-  border-bottom: 1px solid black; }
+  justify-content: space-evenly; }
   .divDireccion div {
     text-align: center;
     font-family: "Crimson Text", serif; }
@@ -77,7 +85,9 @@ body {
 /*---SECCION BEBIDAS*/
 .seccionBebidas {
   border-bottom: 1px solid black;
-  padding-bottom: 1%; }
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: #dddddd; }
   .seccionBebidas .tituloBebidas {
     text-align: center;
     font-size: 3em;
@@ -120,3 +130,30 @@ body {
   font-family: "Crimson Text", serif; }
   .seccionTituloCarrito hr {
     margin: 0 5% 0% 5%; }
+
+#seccionClientes {
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  padding-top: 2%; }
+  #seccionClientes h1 {
+    font-size: 4em; }
+  #seccionClientes hr {
+    margin-left: 5%;
+    margin-right: 5%; }
+  #seccionClientes h2 {
+    font-family: "Calligraffitti", cursive; }
+  #seccionClientes #clientes {
+    display: flex;
+    flex-wrap: wrap; }
+    #seccionClientes #clientes .contenedorClientes {
+      margin: 0.5%;
+      padding: 0.5%;
+      border: 1px solid black;
+      transition: 0.8s; }
+      #seccionClientes #clientes .contenedorClientes .pClientes {
+        font-size: 1.5em;
+        margin-bottom: 0.5%; }
+      #seccionClientes #clientes .contenedorClientes hr {
+        margin: 0; }
+    #seccionClientes #clientes .contenedorClientes:hover {
+      transform: scale(1.1, 1.1); }

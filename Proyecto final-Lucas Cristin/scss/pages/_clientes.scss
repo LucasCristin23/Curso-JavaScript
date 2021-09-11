@@ -1,0 +1,35 @@
+#seccionClientes{
+    text-align: center;
+    font-family: $fonts-beber;
+    padding-top: 2%;
+    h1{
+        font-size: 4em;
+    }
+    hr{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    h2{
+        font-family: $fonts-slogan;
+    }
+    #clientes{
+        display: flex;
+        flex-wrap: wrap;
+        .contenedorClientes{
+            margin: 0.5%;
+            padding: 0.5%;
+            border: 1px solid black;
+            transition: 0.8s;
+            .pClientes{
+                font-size: 1.5em;
+                margin-bottom: 0.5%;
+            }
+            hr{
+                margin: 0;
+            }
+        }
+        .contenedorClientes:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+}

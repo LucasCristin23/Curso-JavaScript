@@ -1,0 +1,4 @@
+.ola{
+    transition: display 3s;
+    display: none;
+}

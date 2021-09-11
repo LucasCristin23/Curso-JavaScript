@@ -46,19 +46,36 @@ divProximamente.setAttribute("class","divJS")
 
 //----AGREGAR BOTON A LAS BEBIDAS
 let divContenedordeBebidas = document.querySelectorAll(".contenedorBebidas")
+let zonaTouchBebidas = document.querySelectorAll(".zonaTouch")
 
 const botonCarrito = () =>{
     for (let i = 0; i < divContenedordeBebidas.length; i++){
+    let divBotonAgregarCarrito = document.createElement("div")
+    divBotonAgregarCarrito.style.display = `none`;
+    divBotonAgregarCarrito.setAttribute("id",`divBotonCarrito${i}`)
     let botonAgragarCarrito = document.createElement("button")
     botonAgragarCarrito.textContent = `Agregar al carrito`
     botonAgragarCarrito.setAttribute(`class`,`btn btn-dark`)
     botonAgragarCarrito.setAttribute(`id`,`botonCarrito${i}`)     
-
-    divContenedordeBebidas[i].appendChild(botonAgragarCarrito)
+    
+    divBotonAgregarCarrito.appendChild(botonAgragarCarrito);
+    divContenedordeBebidas[i].appendChild(divBotonAgregarCarrito);
+    divContenedordeBebidas[i].setAttribute("id",`divContededordeBebidas${i}`);
+    zonaTouchBebidas[i].setAttribute("id",`zonaTouch${i}`)
     }
 }
 
 botonCarrito()
+//-------SECUENCIA CON JQUERY PARA MOSTRAR Y ESCONDER
+let MostrarBotonCarrito = (parametro1, parametro2) => {
+    $(`${parametro1}`).on("click", ()=>{
+        $(`${parametro2}`).toggle("2000")
+    })
+}
+MostrarBotonCarrito("#zonaTouch0", "#divBotonCarrito0")
+MostrarBotonCarrito("#zonaTouch1", "#divBotonCarrito1")
+MostrarBotonCarrito("#zonaTouch2", "#divBotonCarrito2")
+
 
 //---Secuencia de comprar
 //---Llamo a los tres botones 
@@ -67,6 +84,15 @@ let botonCarritoGancia = document.querySelector(`#botonCarrito1`)
 let botonCarritoVodka = document.querySelector(`#botonCarrito2`)
 
 botonCarritoFernet.addEventListener(`click`,() =>{
+    let arrayNuevo = JSON.parse(localStorage.getItem("listaCarrito"));
+    
+    if(JSON.parse(localStorage.getItem("listaCarrito")) != null){
+        arrayNuevo.push(fernet)
+        
+    let listaCarritoJSON = JSON.stringify(arrayNuevo)
+    localStorage.setItem("listaCarrito", listaCarritoJSON)
+    }
+
     listaCarrito.push(fernet)
     let listaCarritoJSON = JSON.stringify(listaCarrito)
     localStorage.setItem("listaCarrito", listaCarritoJSON)
