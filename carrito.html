@@ -50,11 +50,15 @@
              </div>
         </div>
     </div>
-        </nav>  
+        </nav>
+        
+        <!--SECCION TITULO-->
         <section class="seccionTituloCarrito">
             <h1>Carrito de Compras</h1>
             <hr>
         </section>
+
+        <!--SECCION PRODUCTOS IMPRESA DINAMICAMENTE POR JS-->
         <section id="productos">    
             <!--TABLA DE BS-->
             <table class="table">
@@ -67,9 +71,24 @@
                   </tr>
                 </thead>
                 <tbody id="tbCarrito">
-
                 </tbody>
-              </table>
+            </table>
+            <!--BOTON VACIAR CARRITO-->
+              <div class="seccionBtnVaciarCarrito">
+                <button id="btnVaciarCarrito" class="btn btn-light">Vaciar Carrito</button>
+              </div>
+        </section>
+
+        <!--SECCION CONTINUAR CON LA COMPRA-->
+        <section>
+            <div class="seccionContinuarCompra">
+                <div id="totalCarrito">
+                    <p>Total</p>
+                </div>
+                <div>
+                    <button>Continuar Compra</button>
+                </div>
+            </div>
         </section>
     </main>
     

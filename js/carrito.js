@@ -1,7 +1,11 @@
 
 let listaCarrito = JSON.parse(localStorage.getItem("listaCarrito"))
 let tbCarrito = document.querySelector("#tbCarrito")
+let btnVaciarCarrito = document.querySelector("#btnVaciarCarrito")
+let totalCarrito = document.querySelector("#totalCarrito")
+let totalNumero = 0;
 
+//--------Logaritmo imprimir carrito
 for (let index = 0; index < listaCarrito.length; index++) {
     let trCarrito = document.createElement("tr");
     let thNumeroBebida = document.createElement("th");
@@ -26,6 +30,7 @@ for (let index = 0; index < listaCarrito.length; index++) {
     trCarrito.appendChild(tdBtnDelete);
     tdBtnDelete.appendChild(btndelete);
 
+    //------Boton Eliminar un elemento del carrito
     btndelete.addEventListener("click",() =>{
         tbCarrito.removeChild(trCarrito)
         listaCarrito.splice(index,1)
@@ -35,5 +40,19 @@ for (let index = 0; index < listaCarrito.length; index++) {
         })
 }
 
+//-------Boton vaciar carrito 
+btnVaciarCarrito.addEventListener("click", () => {
+    localStorage.removeItem("listaCarrito");
+    window.location.reload();
+})
 
+//------Mostrar total de la compra
+for (let i = 0; i < listaCarrito.length; i++) {
+    totalNumero = totalNumero + listaCarrito[i].precio;
+}
+
+let totalCarritoP = document.createElement("p");
+totalCarritoP.textContent = totalNumero
+
+totalCarrito.appendChild(totalCarritoP);
 
