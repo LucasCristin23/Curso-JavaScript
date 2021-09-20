@@ -5,17 +5,29 @@
     width: 100%;
     color: rgb(224, 222, 222);
     font-family: $fonts-beber;
-    margin-top: 1%;
     background-color: rgb(59, 59, 59);
     border-top: 1px solid black;
     .divPadreFooter{
         display: flex;
         justify-content:space-evenly;
+        div{
+            .pTitleFooter{
+                font-size: 1.5em;
+            }
+            .divPadreIconos{
+                display: flex;
+                justify-content: space-around;
+
+                .contenedorIcons{
+                    height:40px ;
+                    width: 40px;
+                }
+            }
+        }
     }
 
 
-
-
+    //-------------PARTE DE LOS DERECHOS RESERVADOS
     .derechosReservados{
         font-size: 1.1em;
         text-align: center;
