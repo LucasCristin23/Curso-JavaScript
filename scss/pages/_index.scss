@@ -86,8 +86,10 @@ body{
 /*----SECCION PROXIMAMENTE BS*/
 .divJS{
     text-align: center;
+    font-family: $fonts-beber;
     font-size: 2em;
     padding: 2%;
     background-color: aquamarine;
-    margin-bottom: 9%;
+    margin-bottom: 1%;
+    border-bottom: 1px solid black;
 }

@@ -30,6 +30,14 @@ localStorage.setItem("listaDeBebidas", listaDeBebidasJSON)
 let divContenedordeBebidas = document.querySelectorAll(".contenedorBebidas")
 let zonaTouchBebidas = document.querySelectorAll(".zonaTouch")
 
+let divContadorDeCarrito = document.querySelector(`#contadorDeCarrito`)
+let contadorDeCarrito = document.createElement("p")
+divContadorDeCarrito.appendChild(contadorDeCarrito);
+//--Acomodar donde va 
+if(JSON.parse(localStorage.getItem("listaCarrito")) != null){
+    contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------FUNCIONES--------------------------------------------------///////////
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -79,7 +87,7 @@ MostrarBotonCarrito("#zonaTouch2", "#divBotonCarrito2")
 let seccionProximamente = document.querySelector("#seccionProximamente")
 let divProximamente = document.createElement("div")
 let pProximamente = document.createElement("p")
-pProximamente.textContent = `Proximamente nuevas bebidas`
+pProximamente.textContent = `Proximamente Nuevas bebidas`
 
 let pProximamenteBebidas = document.createElement("p")
 pProximamenteBebidas.textContent = `Como ${vinoTermidor.nombreBebida} $${vinoTermidor.precio} ${VinoDada.nombreBebida} $${VinoDada.precio}`
@@ -104,9 +112,13 @@ botonCarritoFernet.addEventListener(`click`, () =>{
             listaCarritoReset.push(fernet)
             let listaCarritoResetJSON = JSON.stringify(listaCarritoReset)
             localStorage.setItem("listaCarrito", listaCarritoResetJSON)
+
+            contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
         }else{
             listaCarrito.push(fernet)
             localStorage.setItem("listaCarrito",JSON.stringify(listaCarrito))
+
+            contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
         }
 })
 botonCarritoGancia.addEventListener(`click`,() =>{
@@ -117,9 +129,13 @@ botonCarritoGancia.addEventListener(`click`,() =>{
         listaCarritoReset.push(gancia)
         let listaCarritoResetJSON = JSON.stringify(listaCarritoReset)
         localStorage.setItem("listaCarrito", listaCarritoResetJSON)
+
+        contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
     }else{
         listaCarrito.push(gancia)
         localStorage.setItem("listaCarrito",JSON.stringify(listaCarrito))
+
+        contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
     } 
 })
 botonCarritoVodka.addEventListener(`click`,() =>{
@@ -130,25 +146,12 @@ botonCarritoVodka.addEventListener(`click`,() =>{
         listaCarritoReset.push(vodka)
         let listaCarritoResetJSON = JSON.stringify(listaCarritoReset)
         localStorage.setItem("listaCarrito", listaCarritoResetJSON)
+
+        contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
     }else{
         listaCarrito.push(vodka)
         localStorage.setItem("listaCarrito",JSON.stringify(listaCarrito))
+
+        contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
     } 
 })
-
-//----Mostrar cuantos productos lleva
-/*
-const MostrarCantidadDeProductos = () =>{
-    if(listaCarrito.length != 0){
-        let divContadorDeCarrito = document.querySelector(`#contadorDeCarrito`)
-        let contadorDeCarrito = document.createElement("p")
-        contadorDeCarrito.textContent = listaCarrito.length + 1
-        divContadorDeCarrito.appendChild(contadorDeCarrito);
-    }
-}
-
-    let divContadorDeCarrito = document.querySelector(`#contadorDeCarrito`)
-    let contadorDeCarrito = document.createElement("p")
-    contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
-    divContadorDeCarrito.appendChild(contadorDeCarrito);
-*/

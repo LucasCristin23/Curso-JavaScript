@@ -1,8 +1,17 @@
 //---------FOOTER
+
+//---------PARA QUE LA PAGINA ESTE CENTRADA
+.pagCentrada{
+    min-height: 100%;
+    position: relative;
+    .pagCentradaFooter{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     color: rgb(224, 222, 222);
     font-family: $fonts-beber;
     background-color: rgb(59, 59, 59);
@@ -19,8 +28,8 @@
                 justify-content: space-around;
 
                 .contenedorIcons{
-                    height:40px ;
-                    width: 40px;
+                    height:38px ;
+                    width: 38px;
                 }
             }
         }

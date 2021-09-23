@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="pagCentrada">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FAVICON Y OPEN GRAP-->
+    <link rel="shortcut icon" href="imagenes/PlantillaBebidas.jpg" type="image/x-icon">
+    <meta name="keywords" content="Bebidas, Alcohol, Promos, Combos, Clientes">
+    <meta name="author" content="Lucas Cristin">
+    <meta name="copyright" content="Bebidas Combo Loco">
+    <meta name="description" content="Somos Bebidas Combo Loco, una empresa dedicada a la comercializacion de las mejores bebidas al mejor precio - En esta seccion encontraras nuestra lista de clientes">
+    <!-------------------------------------------->
+    <meta property="og: title" content="Bebidas Combo Loco">
+    <meta property="og: description" content="Somos Bebidas Combo Loco, una empresa dedicada a la comercializacion de las mejores bebidas al mejor precio - En esta seccion encontraras nuestra lista de clientes">
+    <meta property="og: image" content="imagenes/PlantillaBebidas.jpg">
+    <meta property="og: url" content=""><!--Completar cuando lo hostee-->
+    <meta property="og: local" content="es_ES">
     <title>Clientes - Bebidas Combo Loco</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +46,6 @@
           <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               <a class="nav-link" href="clientes.html">Clientes</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" href="#" tabindex="-1">Disabled</a>
               <a class="nav-link estructuraCarrito" href="carrito.html">
                   <div id="contadorDeCarrito">
                   </div>
@@ -60,46 +70,43 @@
     </main>
 
     <!--FOOTER-->
-    <footer class="footer">
-        <!--PARTE DE CONTACTOS Y DEMAS-->
-        <div>
-          <!--DIV SIGAMOS CONECTADOS Y FORMAS DE PAGO-->
-          <div class="divPadreFooter">
-            <div>
-              <p>Sigamos Conectados</p>
-              <div>
-                <div><i class="fab fa-facebook-square"></i></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <p>Formas de Pago</p>
-              <div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div>
-              <p>Nosotros</p>
-              <div>
-                <!--Preguntas ordenadas-->
-              </div>
+    <footer class="footer pagCentradaFooter">
+      <!--PARTE DE CONTACTOS Y DEMAS-->
+        <!--DIV SIGAMOS CONECTADOS Y FORMAS DE PAGO-->
+        <div class="divPadreFooter">
+          <div>
+            <p class="pTitleFooter">Sigamos Conectados</p>
+            <div class="divPadreIconos">
+              <div class="contenedorIcons"><a href="https://www.facebook.com/lucas.cristin.5"><img src="imagenes/iconFacebook.svg" alt="Icono Facebook"></a></div>
+              <div class="contenedorIcons"><a href="https://www.instagram.com/luki_cristin/?hl=es-la"><img src="imagenes/iconInstagram.svg" alt="Icono de instagram"></a></div>
+              <div class="contenedorIcons"><a href="https://wa.me/1123495480?text=Hola,%20Vi%20tu%20pagina%20y%20quisiera%20saber%20..."><img src="imagenes/iconwpp.svg" alt="Icono Whatsapp"></a></div>
             </div>
           </div>
-          <!--CONTACTANOS-->
-          <div></div>
-          <!--SECCION HAGAMOS NECOCIOS-->
-          <div></div>
+          <div>
+            <p class="pTitleFooter">Formas de Pago</p>
+            <div class="divPadreIconos">
+              <div class="contenedorIcons"><img src="imagenes/iconTageta.svg" alt="Icono targetas"></div>
+              <div class="contenedorIcons"><img src="imagenes/iconEfectivo.svg" alt="Icono Pago en efectivo"></div>
+            </div>
+          </div>
+          <div>
+            <p class="pTitleFooter">Nosotros</p>
+            <div>
+              <div><p>- Preguntas frecuentes</p></div>
+              <div><p>- ¿Quiénes somos?</p></div>
+            </div>
+          </div>
         </div>
-        <!--DERECHOS RESERVADOS-->
-          <div class="derechosReservados">
-              <p>Bebidas Combo loco ® - 2021. Todos los derechos reservados</p>
-          </div>
+
+      <!--DERECHOS RESERVADOS-->
+        <div class="derechosReservados">
+            <p>Bebidas Combo loco ® - 2021. Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
     <script src="js/clientes.js"></script>
 </body>
 </html>

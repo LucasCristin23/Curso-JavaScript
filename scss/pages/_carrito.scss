@@ -26,10 +26,20 @@
 
 //--------SECCION CONTINUAR CON LA COMPRA
 .seccionContinuarCompra{
+    font-family: $fonts-beber;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    background-color:rgb(219, 21, 209);
+    height: 50px;
     #totalCarrito{
         display: flex;
+        justify-content: space-evenly;
+        width: 15%;
+        font-size: 1.5em;
+        p{
+            margin-bottom: 0;
+        }
     }
 
 }

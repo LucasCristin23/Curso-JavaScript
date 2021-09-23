@@ -1,4 +1,5 @@
 const URLGET =  "https://jsonplaceholder.typicode.com/posts";
+let isOpen = false;
 
 $("#seccionClientes").append(`<button id="btnClientes" type="button" class="btn btn-dark">Clientes</button>`)
 $("#seccionClientes").append(`<div id="clientes"></div>`)
@@ -19,4 +20,6 @@ $.get(URLGET, (respuesta, estado) => {
 
 $("#btnClientes").on("click", () =>{
     $(`#clientes`).toggle("2000")
+    $("html").toggleClass("pagCentrada")
+    $("footer").toggleClass("pagCentradaFooter")
 })
