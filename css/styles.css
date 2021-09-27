@@ -53,7 +53,8 @@
   color: #e0dede;
   font-family: "Crimson Text", serif;
   background-color: #3b3b3b;
-  border-top: 1px solid black; }
+  border-top: 1px solid black;
+  text-decoration: none; }
   .footer .divPadreFooter {
     display: flex;
     justify-content: space-evenly; }
@@ -65,6 +66,9 @@
       .footer .divPadreFooter div .divPadreIconos .contenedorIcons {
         height: 38px;
         width: 38px; }
+  .footer #aLukitas {
+    text-decoration: none;
+    color: #e0dede; }
   .footer .derechosReservados {
     font-size: 1.1em;
     text-align: center;

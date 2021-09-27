@@ -16,6 +16,7 @@
     font-family: $fonts-beber;
     background-color: rgb(59, 59, 59);
     border-top: 1px solid black;
+    text-decoration: none;
     .divPadreFooter{
         display: flex;
         justify-content:space-evenly;
@@ -34,7 +35,10 @@
             }
         }
     }
-
+    #aLukitas{
+        text-decoration: none;
+        color: rgb(224, 222, 222);
+    }
 
     //-------------PARTE DE LOS DERECHOS RESERVADOS
     .derechosReservados{
