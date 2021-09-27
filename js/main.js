@@ -32,8 +32,8 @@ let zonaTouchBebidas = document.querySelectorAll(".zonaTouch")
 
 let divContadorDeCarrito = document.querySelector(`#contadorDeCarrito`)
 let contadorDeCarrito = document.createElement("p")
+
 divContadorDeCarrito.appendChild(contadorDeCarrito);
-//--Acomodar donde va 
 if(JSON.parse(localStorage.getItem("listaCarrito")) != null){
     contadorDeCarrito.textContent = JSON.parse(localStorage.getItem("listaCarrito")).length
 }
@@ -101,7 +101,6 @@ divProximamente.setAttribute("class","divJS")
 let botonCarritoFernet = document.querySelector(`#botonCarrito0`)
 let botonCarritoGancia = document.querySelector(`#botonCarrito1`)
 let botonCarritoVodka = document.querySelector(`#botonCarrito2`)
-
 
 
 botonCarritoFernet.addEventListener(`click`, () =>{

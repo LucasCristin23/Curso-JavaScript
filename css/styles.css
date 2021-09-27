@@ -145,11 +145,11 @@ body {
   margin-bottom: 1%;
   border-bottom: 1px solid black; }
 
-.seccionTituloCarrito {
+.seccionTituloCarrito, .sectionFinalizarCompra {
   text-align: center;
   font-family: "Crimson Text", serif;
   padding-top: 1%; }
-  .seccionTituloCarrito hr {
+  .seccionTituloCarrito hr, .sectionFinalizarCompra hr {
     margin: 0 5% 0% 5%; }
 
 #productos {
@@ -178,6 +178,37 @@ body {
     font-size: 1.5em; }
     .seccionContinuarCompra #totalCarrito p {
       margin-bottom: 0; }
+
+.tituloDetalles {
+  text-align: center;
+  padding-top: 2%;
+  font-family: "Crimson Text", serif; }
+  .tituloDetalles p {
+    margin-bottom: 0;
+    font-size: 1.5em; }
+  .tituloDetalles .psectionDetalles {
+    font-size: 2.5em; }
+  .tituloDetalles hr {
+    margin-top: 0; }
+
+#formDetalles {
+  padding-bottom: 2%; }
+
+#sectionDetalles {
+  display: none; }
+
+.sectionFinalizarCompra {
+  border: 1.6px solid black;
+  border-radius: 7%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-bottom: 1%; }
+  .sectionFinalizarCompra div p {
+    font-size: 2em; }
+  .sectionFinalizarCompra #divTableFinalizarCompra {
+    font-size: 1.2em; }
+  .sectionFinalizarCompra button {
+    font-size: 1.2em; }
 
 #seccionClientes {
   text-align: center;
